@@ -1,194 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/bootstrap.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <style>
-        .swiper {
-    width: 100%;
-    height: 90%;
-  }
-  :root {
-    --blueL: #115699;
-    --skyBlueL: #19688f;
-    --redL: #f2555c;
-    --darkRedL: #b82f3f;
-    --greenL: #28bf12;
-    --yellowL: #ffff3f;
-    --white: #ffffff;
-  }
-  #gallery{
-      padding:50px;
-  }
-  #gallery .swiper-slide {
-    /* text-align: center; */
-    font-size: 18px;
-    background: green;
-    padding:50px;
-    /* width:300px !important;
-    min-height:400px;
-    height:430px !important; */
-    border-radius: 2px;
-  }
+      :root {
+        --blueL: #115699;
+        --skyBlueL: #19688f;
+        --redL: #f2555c;
+        --darkRedL: #b82f3f;
+        --greenL: #28bf12;
+        --yellowL: #ffff3f;
+        --white: #ffffff;
+      }
+      /* #gallery{
+      padding:20px;
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-    @media (max-width:900px) {
-        
-    }
+  } */
+  html body {
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23192EA1'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23192EA1'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23192EA1'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .swiper {
+        height: auto;
+        width: 70vw;
+      }
     </style>
-    <header id="header-one" class="sticky-top">
-        <nav class="navbar navbar-expand nav">
-            <div class="col-4 ">
-                <!-- <h4 class=" font-weight-bold d-flex justify-content-center">APL</h4> -->
-                <!-- <img src="./img/Logo.jpeg" style="height:80% ;width:100%" alt=""> -->
-                <div id="logo"></div>
-            </div>
-            <div class="col-8 d-flex justify-content-around">
-                <a href="">
-                    <div class="text-dark font-weight-bold">Service</div>
-                </a>
-                <a href="">
-                    <div class="text-dark font-weight-bold">Reviews</div>
-                </a>
-                <a href="gallery.html">
-                    <div class="text-dark font-weight-bold">Gallery</div>
-                </a>
-                <a href="">
-                    <div class="text-dark font-weight-bold">About Us</div>
-                </a>
-                <a href="">
-                    <div class="text-dark font-weight-bold">Contact</div>
-                </a>
-                
-                
-            </div>
-        </nav>
-    </header>
-    <script>
-        let btn = document.querySelector(".nav-btn");
-        btn.addEventListener("click",()=>{
-            console.log("Happy");
-        })
-    </script>
-    <header id="header-two">
-        <button class="nav-btn  d-flex flex-column justify-content-between align-items-center">
-            <div class="nav-line"></div>
-            <div class="nav-line"></div>
-            <div class="nav-line"></div>
-        </button>
-        <nav id="second-nav" class="navbar navbar-expand nav">
-          
-        </nav>
-    </header>
+   <div class="fixed-btn" >
+    <!-- <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div> -->
+</div>
+<div class="hidden" id="grey-overlay"></div>
+<nav class="hidden"">
+    <div class="fixed-x">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+    </div>
+    <div id="logo"></div>
 
-    <section id="gallery" class="d-flex justify-content-center align-items-center">
-        <div class="swiper mySwiper5">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide row">
-                  <div class="col-md-6 bg-primary">primarys</div>
-                  <div class="col-md-6 bg-primary">primarys</div>
-              </div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+    <div class="nav-item ">
+        <span class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" id="home-icon" width="32" height="32" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+              </svg>
+        </span>
+        <span class="nav-link">
+            <h5>
+               <a href="index.html">Home</a>
+            </h5>
+            <div class="underline"></div>
+        </span>
+    </div>
+    <div class="nav-item">
+        <span class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" id="home-icon" width="32" height="32" fill="currentColor" class="bi bi-wrench" viewBox="0 0 16 16">
+                <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11l.471.242z"/>
+              </svg>
+        </span>
+        <span class="nav-link">
+            <h5>
+               <a href="services.html">Services</a>
+            </h5>
+            <div class="underline"></div>
+        </span>
+    </div>
+    <div class="nav-item active">
+        <span class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="home-icon" fill="var(--blueL)" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+              </svg>
+        </span>
+        <span class="nav-link ">
+            <h5>
+               <a href="gallery.html">Gallery</a>
+            </h5>
+            <div class="underline"></div>
+        </span>
+    </div>
+    <div class="nav-item">
+        <span class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="home-icon" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+              </svg>
+        </span>
+        <span class="nav-link">
+            <h5>
+               <a href="index.html#about-us">About Us</a>
+            </h5>
+            <div class="underline"></div>
+        </span>
+    </div>
+   <div class="nav-item d-flex justify-content-center">
+<small class="d-flex justify-content-center copyright  m-2">Copyright © 2021 , All Rights Reserved</small>
+
+   </div>
+</nav>
+
+<a href="./gallery.html#contact-us" class="phone">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+      </svg>
+</a>
+<script>
+let fixedBtn = document.querySelector(".fixed-btn");
+let fixedX = document.querySelector(".fixed-x");
+let overlay = document.querySelector("#grey-overlay")
+overlay.addEventListener("click",()=>{
+    nav.classList.toggle("hidden")
+    overlay.classList.toggle("grey-overlay")
+    overlay.classList.toggle("hidden")
+
+    nav.style.transition = "10s"
+    nav.classList.toggle("slide-nav")
+})
+let nav = document.querySelector("nav");
+
+fixedBtn.addEventListener("click",()=>{
+    console.log("Happy");
+    nav.classList.toggle("hidden")
+    overlay.classList.toggle("grey-overlay")
+    overlay.classList.toggle("hidden")
+    fixedBtn.style.display = "none";
+    nav.style.transition = "10s"
+    nav.classList.toggle("slide-nav")
+})
+fixedX.addEventListener("click",()=>{
+    console.log("Happy");
+    fixedBtn.style.display = "flex";
+    nav.classList.toggle("hidden")
+    overlay.classList.toggle("grey-overlay")
+    overlay.classList.toggle("hidden")
+    
+
+    nav.classList.toggle("slide-nav")
+})
+</script>
+   
+    <section
+      id="gallery"
+      class=""
+    >
+    <div style="margin-left: 14vw; padding-top: 50px">
+        <h1>Mission</h1>
+        <small>Swipe to see more.</small>
+        <!-- <div style="opacity: 0;">b</div> -->
+        <div
+          style="width: 10%; margin-bottom: 16px; color: grey"
+          class="underline"
+        ></div>
+      </div>
+      <div class="swiper shadow mySwiper5">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide d-flex flex-wrap">
+            <div class="col-md-6">
+              <div class="gallery-img-0"></div>
             </div>
+            <div class="col-md-6">
+                <div class="gallery-img-00"></div>
+              </div>
           </div>
+          <div class="swiper-slide d-flex flex-wrap">
+            <div class="col-md-6">
+              <div class="gallery-img-1"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="gallery-img-2"></div>
+              </div>
+          </div>
+          <div class="swiper-slide d-flex flex-wrap">
+            <div class="col-md-6">
+              <div class="gallery-img-3"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="gallery-img-4"></div>
+              </div>
+          </div>
+          <div class="swiper-slide d-flex flex-wrap">
+            <div class="col-md-6">
+              <div class="gallery-img-5"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="gallery-img-6"></div>
+              </div>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#000000"
+        fill-opacity="1"
+        d="M0,256L60,245.3C120,235,240,213,360,218.7C480,224,600,256,720,240C840,224,960,160,1080,149.3C1200,139,1320,181,1380,202.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+      ></path>
+    </svg> -->
     <footer class="d-flex flex-column justify-content-around">
-       
-        <div class="line"></div>
-        <!-- <h4 class=" text-light d-flex justify-content-center font-weight-bold">APL</h4> -->
-         <!-- <em class="text-light d-flex justify-content-center">We are here to help , so you can rest assured</em> -->
-        <section class="row d-flex justify-content-around p-5 text-light">
-            <div class="col-md-4">
-                <h1 class=" text-light d-flex justify-content-center font-weight-bold">APL</h4>
-         <!-- <em class="text-light d-flex justify-content-center">We are here to help , so you can rest assured</em> -->
-        
-                </div>
-                <div class="col-md-2">
-                    <!-- <div class="footer-column">Contact</div>
-                        <div class="footer-column">Renovation</div>
-                        <div class="footer-column">Restoration</div>
-                        <div class="footer-column">More Info</div> -->
-                    </div>
-                    <div class="col-md-3">
-                        <div class="footer-column">Service</div>
-                        <div class="footer-column">Reviews</div>
-                        <div class="footer-column">Who do we serve</div>
-                        <div class="footer-column">About us </div>
-                    </div>
-            <div class="col-md-3">
-                <div class="footer-column">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                      </svg>
-                </div>
-                <div class="footer-column">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                      </svg>
-                </div>
-                <div class="footer-column">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                      </svg>
-                </div>
-                <div class="footer-column">More Info</div>
+      <section class="row p-5">
+        <div class="col-md-6">
+          <h2>Contact Us</h2>
+          <form action="">
+            <div class="form-group">
+              <label for="">Email:</label>
+              <input
+                type="email"
+                class="form-control"
+                name=""
+                id=""
+                aria-describedby="emailHelpId"
+                placeholder="example@example.com"
+              />
             </div>
+            <div class="form-group">
+              <label for="">Name:</label>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="form-control"
+                placeholder="Name"
+                aria-describedby="helpId"
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Surname:</label>
+              <input
+                type="text"
+                name=""
+                id=""
+                class="form-control"
+                placeholder="Surname"
+                aria-describedby="helpId"
+              />
+            </div>
+            <div class="form-group">
+              <label>Mesage:</label>
+              <textarea
+                class="form-control"
+                name=""
+                id=""
+                cols="30"
+                placeholder="Your Message..."
+                rows="5"
+                style="width: 100%"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6 row justify-content-around">
+          <div class="col-md-3 d-flex flex-column">
+            <div class="site-map">
+              <div class="footer-column"><a href="home.html">Service</a></div>
+              <div class="footer-column">Reviews</div>
+              <div class="footer-column">Gallery</div>
+              <div class="footer-column">About us</div>
+            </div>
+            <div class="">
+              <div class="footer-column">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-column">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-twitter"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                  />
+                </svg>
+              </div>
+              <div class="footer-column">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                  />
+                </svg>
+              </div>
+              <p style="width: 435px; margin-top: 20px">
+                <a
+                  href="https://www.google.com/maps/place/190+Edenhurst+Rd,+Mondeor,+Johannesburg+South,+2091/@-26.27175,28.0092013,17z/data=!3m1!4b1!4m5!3m4!1s0x1e9508b615384fdd:0x203da45eb86bb63f!8m2!3d-26.27175!4d28.01139"
+                  >Address: 190 Edenhurst Road Mondeor Johannesburg 2091</a
+                >
+              </p>
+              <p href="" style="width: 180px; margin-top: 20px">
+                <a href="">Tel: +27 60 376 8428</a>
+              </p>
+            </div>
+          </div>
+          <!-- <div class="col-md-6"> -->
+          <div id="dark-logo"></div>
+          <!-- </div> -->
+        </div>
+      </section>
 
-            <!-- <div class="footer-column">Contact</div>
-            <div class="footer-column">Renovation</div>
-            <div class="footer-column">Restoration</div>
-            <div class="footer-column">More Info</div> -->
-        </section>
-        <div class="d-flex justify-content-center copyright  m-2">Copyright © 2021 , All Rights Reserved</div>
+      <div class="d-flex justify-content-center copyright m-2">
+        Copyright © 2021 , All Rights Reserved
+      </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script>
- var swiper6 = new Swiper(".mySwiper5", {
+      var swiper5 = new Swiper(".mySwiper5", {
         grabCursor: true,
-        autoplay:true,
+        autoPlay:true,
         effect: "creative",
         creativeEffect: {
           prev: {
             shadow: true,
-            origin: "left center",
-            translate: ["-5%", 0, -200],
-            rotate: [0, 100, 0],
+            translate: ["-125%", 0, -800],
+            rotate: [0, 0, -90],
           },
           next: {
-            origin: "right center",
-            translate: ["5%", 0, -200],
-            rotate: [0, -100, 0],
+            shadow: true,
+            translate: ["125%", 0, -800],
+            rotate: [0, 0, 90],
           },
         },
       });
-      </script>
-       <script>
+    </script>
+    <script>
       var swiper = new Swiper(".mySwiperV", {
         direction: "vertical",
         pagination: {
@@ -197,12 +386,12 @@
         },
       });
     </script>
-      <script>
-          let serviceRows = document.querySelector("#services-row-2");
-          let viewMore = document.querySelector("#view-all");
-          viewMore.addEventListener("click",()=>{
-              serviceRows.classList.toggle("hidden")
-          })
-      </script>
-</body>
+    <script>
+      let serviceRows = document.querySelector("#services-row-2");
+      let viewMore = document.querySelector("#view-all");
+      viewMore.addEventListener("click", () => {
+        serviceRows.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>

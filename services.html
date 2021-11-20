@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <title>Document</title>
+    <style>
+      html body {
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23192EA1'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23192EA1'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(16.65) translate(-939.94 -704.95)'%3E%3Cg fill='%23192EA1'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      main section {
+        padding: 0 50px;
+        background: rgba(255, 255, 255, 0.8);
+      }
+      p.item {
+        background: rgba(255, 255, 255, 0.8);
+      }
+      .col-md-6 h2{
+          color:var(--blueL)
+      }
+      section .col-md-6 .item {
+        /* border: 1px solid pink; */
+        /* background-color: rgba(238, 238, 238,.9); */
+        /* background-color: white;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Ccircle stroke='%23DDDDDD' vector-effect='non-scaling-stroke' id='a' fill='none' stroke-width='5' r='315'/%3E%3Cuse id='f' href='%23a' stroke-dasharray='100 100 100 9999'/%3E%3Cuse id='b' href='%23a' stroke-dasharray='250 250 250 250 250 9999'/%3E%3Cuse id='e' href='%23a' stroke-dasharray='1000 500 1000 500 9999'/%3E%3Cuse id='g' href='%23a' stroke-dasharray='1500 9999'/%3E%3Cuse id='h' href='%23a' stroke-dasharray='2000 500 500 9999'/%3E%3Cuse id='j' href='%23a' stroke-dasharray='800 800 800 800 800 9999'/%3E%3Cuse id='k' href='%23a' stroke-dasharray='1200 1200 1200 1200 1200 9999'/%3E%3Cuse id='l' href='%23a' stroke-dasharray='1600 1600 1600 1600 1600 9999'/%3E%3C/defs%3E%3Cg transform='translate(1000 750)' %3E%3Cg transform='rotate(0 0 0)' %3E%3Ccircle fill='%23DDDDDD' r='10'/%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23f' transform='scale(.1) rotate(50 0 0)' /%3E%3Cuse href='%23f' transform='scale(.2) rotate(100 0 0)' /%3E%3Cuse href='%23f' transform='scale(.3) rotate(150 0 0)' /%3E%3C/g%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23b' transform='scale(.4) rotate(200 0 0)' /%3E%3Cuse href='%23z' transform='scale(.5) rotate(250 0 0)' /%3E%3C/g%3E%3Cg id='z' transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23b'/%3E%3Cuse href='%23b' transform='scale(1.2) rotate(90 0 0)' /%3E%3Cuse href='%23b' transform='scale(1.4) rotate(60 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.6) rotate(120 0 0)' /%3E%3Cuse href='%23e' transform='scale(1.8) rotate(30 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg id='y' transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23e' transform='scale(1.1) rotate(20 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.3) rotate(-40 0 0)' /%3E%3Cuse href='%23g' transform='scale(1.5) rotate(60 0 0)' /%3E%3Cuse href='%23h' transform='scale(1.7) rotate(-80 0 0)' /%3E%3Cuse href='%23j' transform='scale(1.9) rotate(100 0 0)' /%3E%3C/g%3E%3C/g%3E%3Cg transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cg transform='rotate(0 0 0)'%3E%3Cuse href='%23h' transform='scale(2) rotate(60 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.1) rotate(120 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.3) rotate(180 0 0)'/%3E%3Cuse href='%23h' transform='scale(2.4) rotate(240 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.5) rotate(300 0 0)'/%3E%3C/g%3E%3Cuse href='%23y' transform='scale(2) rotate(180 0 0)' /%3E%3Cuse href='%23j' transform='scale(2.7)'/%3E%3Cuse href='%23j' transform='scale(2.8) rotate(45 0 0)'/%3E%3Cuse href='%23j' transform='scale(2.9) rotate(90 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.1) rotate(135 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.2) rotate(180 0 0)'/%3E%3C/g%3E%3Cuse href='%23k' transform='scale(3.3) rotate(225 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.5) rotate(270 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.6) rotate(315 0 0)'/%3E%3Cuse href='%23k' transform='scale(3.7)'/%3E%3Cuse href='%23k' transform='scale(3.9) rotate(75 0 0)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover; */
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="fixed-btn" >
+        <!-- <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div> -->
+    </div>
+    <div class="hidden" id="grey-overlay"></div>
+    <nav class="hidden"">
+        <div class="fixed-x">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+        <div id="logo"></div>
+
+        <div class="nav-item">
+            <span class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" id="home-icon" width="32" height="32" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                  </svg>
+            </span>
+            <span class="nav-link">
+                <h5>
+                   <a href="index.html">Home</a>
+                </h5>
+                <div class="underline"></div>
+            </span>
+        </div>
+        <div class="nav-item active">
+            <span class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" id="home-icon" width="32" height="32" fill="var(--blueL)" class="bi bi-wrench" viewBox="0 0 16 16">
+                    <path d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11l.471.242z"/>
+                  </svg>
+            </span>
+            <span class="nav-link">
+                <h5>
+                   <a href="services.html">Services</a>
+                </h5>
+                <div class="underline"></div>
+            </span>
+        </div>
+        <div class="nav-item">
+            <span class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="home-icon" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                    <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                  </svg>
+            </span>
+            <span class="nav-link">
+                <h5>
+                   <a href="gallery.html">Gallery</a>
+                </h5>
+                <div class="underline"></div>
+            </span>
+        </div>
+        <div class="nav-item">
+            <span class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" id="home-icon" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                    <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                  </svg>
+            </span>
+            <span class="nav-link">
+                <h5>
+                   <a href="index.html#about-us">About Us</a>
+                </h5>
+                <div class="underline"></div>
+            </span>
+        </div>
+       <div class="nav-item d-flex justify-content-center">
+    <small class="d-flex justify-content-center copyright  m-2">Copyright © 2021 , All Rights Reserved</small>
+
+       </div>
+    </nav>
+
+    <a href="./services.html#contact-us" class="phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+          </svg>
+    </a>
+<script>
+    let fixedBtn = document.querySelector(".fixed-btn");
+    let fixedX = document.querySelector(".fixed-x");
+    let overlay = document.querySelector("#grey-overlay")
+    overlay.addEventListener("click",()=>{
+        nav.classList.toggle("hidden")
+        overlay.classList.toggle("grey-overlay")
+        overlay.classList.toggle("hidden")
+
+        nav.style.transition = "10s"
+        nav.classList.toggle("slide-nav")
+    })
+    let nav = document.querySelector("nav");
+    
+    fixedBtn.addEventListener("click",()=>{
+        console.log("Happy");
+        // fixedBtn.style.background = "white";
+        nav.classList.toggle("hidden")
+        overlay.classList.toggle("grey-overlay")
+        overlay.classList.toggle("hidden")
+        // fixedBtn.style.display = "none";
+        nav.style.transition = "10s"
+        nav.classList.toggle("slide-nav")
+    })
+    fixedX.addEventListener("click",()=>{
+        console.log("Happy");
+        fixedBtn.style.display = "flex";
+        nav.classList.toggle("hidden")
+        overlay.classList.toggle("grey-overlay")
+        overlay.classList.toggle("hidden")
+        
+
+        nav.classList.toggle("slide-nav")
+    })
+</script>
+    <main
+      style="position: relative"
+      class="d-flex flex-column justify-content-center align-items-center"
+    >
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="water-flood"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modelTitleId"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Water & Flood</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div
+                style="width: 100% !important"
+                class="restoration-image-2"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <section
+        class="
+          row
+          p-5
+          d-flex
+          flex-column
+          justify-content-center
+          align-items-center
+        "
+      >
+        <h1 class="heading">Restoration Services</h1>
+        <!-- <small>Click image for more information.</small> -->
+      </section>
+      <section class="row column-reverse">
+        <div style="padding: 8px" data-aos="flip-up" class="col-md-6">
+          <h2 style="color: transparent">A</h2>
+          <div style="opacity: 0" class="underline"></div>
+          <br />
+          <div class="item">
+            <div class="restoration-image-3"></div>
+          </div>
+        </div>
+        <div style="padding: 8px" data-aos="fade-left" class="col-md-6">
+          <h2>Asphalt Paving</h2>
+          <div class="underline"></div>
+          <br />
+          <div class="item">
+            <h3>What is Ashpalt Paving?</h3>
+            <p class="item">
+              Road maintenance is work that takes place on roads from motorways
+              to unclassified roads to ensure they remain strong, safe and
+              efficient. Road maintenance takes many forms, from pothole repair
+              to re-applying highway surfacing, but the overarching aim is to
+              keep road users safe, manage traffic and maintain upkeep. Road
+              maintenance can include: Pothole repair Road resurfacing Pavement
+              resurfacing Road maintenance also extends to the repair and
+              unblocking of gullies or drains in a road, replacement of grid and
+              manhole covers, replacement and repair of road signs or street
+              names, and maintenance of green spaces (such as hedge cutting and
+              weeding).
+              <br />
+              <br />
+              Road maintenance can include:
+            </p>
+            <ul>
+              <li>Pothole repair</li>
+              <li>Road resurfacing</li>
+              <li>Pavement resurfacing</li>
+              <li><a href="">View More Information Here</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="box-0"></div> -->
+      </section>
+      <section id="parralax-box"></section>
+
+      <br />
+      <section class="row column-reverse">
+        <div style="padding: 8px" data-aos="fade-right" class="col-md-6">
+          <h2>Cladding</h2>
+          <div class="underline"></div>
+          <br />
+          <div class="item">
+            <h3>What is Cladding?</h3>
+            <p class="">
+              Cladding is any material used to cover a structure's exterior.
+              Picture a protective layer over a surface like a roof or exterior
+              wall. Just as your skin protects internal bones and organs,
+              cladding protects against the elements and shields against
+              environmental conditions. Cladding doesn't have to be waterproof,
+              but it often controls how elements hit or fall on a surface. Think
+              about how a raincoat allows rain to slide off of you rather than
+              soaking your clothing. Cladding can also serve a decorative
+              function, to hide a more structural but perhaps not attractive
+              substrate (which is stronger material that underlies a surface and
+              acts as a stabilizer).
+              <br />
+              <br />
+              Cladding can include:
+            </p>
+            <ul>
+              <li>Wall Cladding</li>
+              <li>Stone Cladding</li>
+              <li>Wood Cladding</li>
+              <li>Tiling on all surfaces</li>
+              <li><a href="">View More Information Here</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="box-0"></div> -->
+        <div style="padding: 8px" data-aos="flip-up" class="col-md-6">
+          <h2 style="color: transparent">A</h2>
+          <div style="opacity: 0" class="underline"></div>
+          <br />
+          <div class="restoration-image-4"></div>
+        </div>
+      </section>
+      <section id="parralax-box"></section>
+
+      <br />
+      <section class="row column-reverse">
+        <div style="padding: 8px" class="col-md-6">
+          <h2 style="color: transparent">A</h2>
+          <div style="opacity: 0" class="underline"></div>
+          <br />
+          <div class="item">
+            <div class="restoration-image-5"></div>
+          </div>
+        </div>
+        <div style="padding: 8px" data-aos="fade-left" class="col-md-6">
+          <h2>Roof Repairs and Sealing</h2>
+          <div class="underline"></div>
+          <br />
+          <div class="item">
+            <h3>What is Roof Repairs and Sealing?</h3>
+            <p class="item">
+              The contractor will use a different approach depending on the
+              roofing problem. For example, damaged flashing will be replaced
+              with new ones, areas with worn sealant will be caulked or tarred
+              and damaged vent boots will be removed and replaced. The
+              contractor will make sure to seal the area surrounding the boot to
+              prevent leaks. Missing or broken shingles can also be replaced
+              with new ones. Note that for best results, you should hire a
+              contractor that carries the same shingles that your roof currently
+              has. Roof repairs replace, repair, and install the roofs of
+              buildings, using a variety of materials, including shingles,
+              bitumen, and metal. Roofing work can be physically demanding
+              because it involves heavy lifting, as well as climbing, bending,
+              and kneeling, often in extreme weather conditions.
+              <!-- <br /> -->
+              <br />
+              Road maintenance can include:
+            </p>
+            <ul>
+              <li>Broken or Missing Shingles</li>
+              <li>Cracked Flashing</li>
+              <li>Cracked Vent Booting</li>
+              <li><a href="">View More Information Here</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- <div class="box-0"></div> -->
+      </section>
+      <section id="parralax-box"></section>
+
+      <br />
+      <section class="row animate__fadeOutDownBig column-reverse">
+        <div style="padding: 8px" data-aos="fade-right" class="col-md-6">
+          <h2>Trench Digging and Pipe Installation</h2>
+          <div class="underline"></div>
+          <br />
+          <div class="item">
+            <h3>What is Trench Digging and Pipe Installation?</h3>
+            <p class="">
+              Trenches must be dug, prepared and backfilled in a way that
+              prevents pipe damage. Common damage includes cracking, breaking
+              joints and creating dips or bends in the pipe. Trench bottoms
+              should be free of rocks and debris and provide uniform support. If
+              there is bedrock, hardpan or large rocks on the trench bottom, the
+              trench should be bedded with sand.
+              <br />
+              <br />
+              <span style="margin-bottom: 5px; font-weight: bold"
+                >Proper bedding and backfill procedures can include the
+                following steps:</span
+              >
+              <br />
+              <br />
+              Making sure the bottom of the pipe trench has a good foundation.
+              This can be the original soil material free of rocks and on the
+              proper slope. This is where you want to have the trench wide
+              enough so the bottom or foundation can be properly prepared. The
+              bedding material is applied. This provides support for the bottom
+              of the pipe. Typically this material is sand, although some areas
+              allow use of coarser granular materials; so as always check your
+              state and local regulations. The sand or bedding material should
+              be compacted using a mechanical compactor. This layer is usually
+              about 3 to 4 inches thick, but it can be as much as 6 inches.
+            </p>
+          </div>
+        </div>
+        <!-- <div class="box-0"></div> -->
+        <div style="padding: 8px" data-aos="flip-up" class="col-md-6">
+          <h2 style="color: transparent">A</h2>
+          <div style="opacity: 0" class="underline"></div>
+          <br />
+          <div class="restoration-image-7"></div>
+        </div>
+      </section>
+      <section id="parralax-box"></section>
+
+      <br />
+      <h1 class="heading">Restoration Services</h1>
+      <small>Hover image for more information.</small>
+      <br />
+      <section class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="service-img-1 shadow">
+            <div class="card">
+              <div class="content">
+                <div class="front">
+                  Post Work 
+                  <small>Cleaning and Disposal</small>
+                  <!-- Front -->
+                </div>
+                <div class="back">
+                    <img src="./img/istockphoto-1251228580-170667a.jpg" alt="" srcset="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 ">
+          <div class="service-img-2 shadow">
+            <div class="card">
+              <div class="content">
+                <div class="front">
+                  Root Cause
+                  <small
+                    >analysis to determine the causes of damage to ground,
+                    walls, ceilings and roofs.</small
+                  >
+                  <!-- Front -->
+                </div>
+                <div class="back">
+                    <img src="./img/istockphoto-1094158396-612x612.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <div class="service-img-3 shadow">
+              
+              <div class="card">
+                <div class="content">
+                  <div class="front">
+                    Bricklaying
+                    <small
+                      >lining and trenching</small
+                    >
+                    <!-- Front -->
+                  </div>
+                  <div class="back">
+                      <img src="./img/istockphoto-622800884-612x612.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="parralax-box"></section>
+    </main>
+    <footer id="contact-us" class="d-flex flex-column justify-content-around">
+        <section class="row p-5">
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <form action="">
+                    <div class="form-group">
+                      <label for="">Email:</label>
+                      <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="example@example.com">
+                    </div>
+                        <div class="form-group">
+                            <label for="">Name:</label>
+                            <input type="text" name="" id="" class="form-control" placeholder="Name" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Surname:</label>
+                            <input type="text" name="" id="" class="form-control" placeholder="Surname" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label>Mesage:</label>
+                            <textarea class="form-control" name="" id="" cols="30" placeholder="Your Message..." rows="5" style="width:100%"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                        </form>
+            </div>
+            <div class="col-md-6 row justify-content-around ">
+                <div class="col-md-3 d-flex flex-column">
+                    <div class="site-map">
+                        <div class="footer-column">Service</div>
+                        <div class="footer-column">Reviews</div>
+                        <div class="footer-column">Gallery</div>
+                        <div class="footer-column">About us </div>
+                    </div>
+                    <div class="">
+                        <div class="footer-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                              </svg>
+                        </div>
+                        <div class="footer-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                              </svg>
+                        </div>
+                        <div class="footer-column">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                              </svg>
+                        </div>
+                        <p style="width:435px;margin-top:20px"><a href="https://www.google.com/maps/place/190+Edenhurst+Rd,+Mondeor,+Johannesburg+South,+2091/@-26.27175,28.0092013,17z/data=!3m1!4b1!4m5!3m4!1s0x1e9508b615384fdd:0x203da45eb86bb63f!8m2!3d-26.27175!4d28.01139">Address: 190 Edenhurst Road Mondeor Johannesburg 2091</a></p>
+                        <p href="" style="width:180px;margin-top:20px"><a href="">Tel: +27 60 376 8428</a></p>
+                </div>
+
+            </div>
+            <!-- <div class="col-md-6"> -->
+                <div id="dark-logo"></div>
+            <!-- </div> -->
+            </div>
+        </section>
+
+      <div class="d-flex justify-content-center copyright m-2">
+        Copyright © 2021 , All Rights Reserved
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      let viewAll = document.querySelector("#view-all");
+      let row2 = document.querySelector("#hide-row");
+      viewAll.addEventListener("click", () => {
+        row2.classList.toggle("hidden-row");
+      });
+    </script>
+  </body>
+</html>
